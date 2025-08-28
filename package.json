@@ -1,0 +1,64 @@
+{
+  "name": "@bhattishani/mfa-kit",
+  "version": "1.1.0",
+  "description": "A flexible Multi-Factor Authentication kit for Next.js, Express, and Cloudflare applications",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./adapters/nextjs": "./dist/adapters/nextjs.js",
+    "./adapters/express": "./dist/adapters/express.js",
+    "./adapters/cloudflare": "./dist/adapters/cloudflare.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "mfa",
+    "2fa",
+    "authentication",
+    "security",
+    "passkey",
+    "webauthn",
+    "totp",
+    "otp",
+    "nextjs",
+    "express",
+    "cloudflare"
+  ],
+  "author": "Your Organization",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/mfa-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/mfa-kit/issues"
+  },
+  "homepage": "https://github.com/your-org/mfa-kit#readme",
+  "sideEffects": false,
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@simplewebauthn/browser": "^13.1.2",
+    "@simplewebauthn/server": "^13.1.2",
+    "argon2": "^0.44.0",
+    "otplib": "^12.0.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "@types/qrcode": "^1.5.5",
+    "eslint": "^9.34.0",
+    "next": "^15.0.0",
+    "prettier": "^3.6.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "zod": "^4.1.5"
+  },
+  "peerDependencies": {
+    "next": ">=15.0.0"
+  }
+}
